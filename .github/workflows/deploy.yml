@@ -15,7 +15,6 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: 9
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -24,7 +23,6 @@ jobs:
       - run: pnpm run build -- --base /speaker-archetypes/
         env:
           NODE_OPTIONS: --max_old_space_size=4096
-
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
