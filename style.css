@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+.slidev-slide,
+.slidev-layout {
+  background: #ffffff !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  color: #000000 !important;
+}
+
+.slidev-slide h1,
+.slidev-slide h2,
+.slidev-slide h3,
+.slidev-slide h4,
+.slidev-slide p,
+.slidev-slide li,
+.slidev-slide span,
+.slidev-slide div,
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3,
+.slidev-layout h4,
+.slidev-layout p,
+.slidev-layout li,
+.slidev-layout span,
+.slidev-layout div {
+  color: #000000 !important;
+}
+
+.slidev-layout ul{
+  margin-top: 12px;
+}
+code, pre {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+pre {
+  background: #f5f5f5 !important;
+  border-left: 4px solid #00CE93 !important;
+}
+
+a {
+  color: #00CE93 !important;
+}
+
+code {
+  background: #e8e8e8 !important;
+  color: #00CE93 !important;
+}
+
+table {
+  color: #000000 !important;
+}
+
+th {
+  background: #00CE93 !important;
+  color: #ffffff !important;
+}
+
+td {
+  border-color: #cccccc !important;
+  color: #000000 !important;
+}
+
+blockquote {
+  border-left: 4px solid #00CE93 !important;
+  background: #f9f9f9 !important;
+  color: #333333 !important;
+}
+
+::selection {
+  background: #00CE93;
+  color: #ffffff;
+}
+
+kbd {
+  background: #00CE93 !important;
+  color: #ffffff !important;
+}
