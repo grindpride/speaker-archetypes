@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build slides.md --base /speaker-archetypes/",
+    "build": "slidev build --base /speaker-archetypes/",
     "dev": "slidev --open",
     "export": "slidev export"
   },
