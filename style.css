@@ -56,6 +56,10 @@ th {
   color: #ffffff !important;
 }
 
+.slidev-layout td,th {
+  padding: 0.4rem;
+}
+
 td {
   border-color: #cccccc !important;
   color: #000000 !important;
