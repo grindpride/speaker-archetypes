@@ -24,35 +24,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 1. Сначала ставим Node.js БЕЗ встроенного кэша pnpm
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-
-      # 2. Ставим pnpm и включаем кэширование на его стороне
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 9
-          run_install: false # отключаем автоматическую установку, сделаем вручную
 
-      # 3. Получаем путь к кэшу pnpm для ручного кэширования
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-
-      # 4. Настраиваем стандартный GitHub кэш для pnpm
-      - name: Setup pnpm cache
-        uses: actions/cache@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          node-version: lts/*
+          cache: 'pnpm'
 
-      # 5. Устанавливаем зависимости и собираем проект
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
