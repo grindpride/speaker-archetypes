@@ -13,20 +13,23 @@ transition: slide-left
 highlighter: shiki
 ---
 
+<div
+  v-click
+  class="absolute inset-0 z-0 transition-opacity duration-700"
+>
+  <div
+    class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-75"
+    style="background-image: url('./back.png')"
+  ></div>
+</div>
+
+<div class="relative z-10 inline-block rounded-xl bg-white/50 px-10 py-8 backdrop-blur-sm">
+
 # Архетипы фронтенд-спикеров
 
 
-<div v-click>
+<div v-click="-1">
 <h2>По Смешарикам</h2>
-<div class="flex gap-8 justify-center mt-12">
-  <span class="text-4xl">🦔</span>
-  <span class="text-4xl">🐇</span>
-  <span class="text-4xl">🐧</span>
-  <span class="text-4xl">🦉</span>
-  <span class="text-4xl">🐻</span>
-  <span class="text-4xl">🐑</span>
-  <span class="text-4xl">🦌</span>
-  <span class="text-4xl">🦚</span>
 </div>
 </div>
 <!--
@@ -76,11 +79,15 @@ highlighter: shiki
 layout: section
 ---
 
-# 🦔 Ежик
+# Ежик
 
 ## Прагматичный Архивариус
 
 *"The Educator"*
+
+<div class="speaker-avatar">
+  <img :src="'./chars/ejik.png'" alt="Ежик" />
+</div>
 
 <!--
 Начнём с самого педантичного спикера - Ёжика.
@@ -124,7 +131,7 @@ layout: section
 
 </div>
 
-<div v-click class="mt-8 p-4 bg-blue-900/30 rounded-lg border border-blue-500/50">
+<div v-click class="mt-8 p-4 rounded-lg border border-blue-500/50">
 
 **Фишка:** В конце выступления даёт ссылку на Notion со списком всех первоисточников
 
@@ -153,7 +160,7 @@ layout: section
 
 </div>
 
-<div v-click class="mt-6 p-4 bg-red-900/30 rounded-lg border border-red-500/50">
+<div v-click class="mt-6 p-4 rounded-lg border border-red-500/50">
 
 **Страх:** Ошибиться в синтаксисе на слайде и ввести аудиторию в заблуждение
 
@@ -167,11 +174,15 @@ layout: section
 layout: section
 ---
 
-# 🐇 Крош
+# Крош
 
 ## Евангелист-Хайпожор
 
 *"The Visionary / Motivator"*
+
+<div class="speaker-avatar">
+  <img :src="'./chars/krosh.png'" alt="Крош" />
+</div>
 
 <!--
 А теперь полная противоположность — Крош!
@@ -207,7 +218,7 @@ layout: section
 
 </div>
 
-<div v-click class="mt-8 p-4 bg-yellow-900/30 rounded-lg border border-yellow-500/50">
+<div v-click class="mt-8 p-4 rounded-lg border border-yellow-500/50">
 
 **Фишка:** После доклада все хотят бросить текущие задачи и пробовать новые инструменты
 
@@ -224,9 +235,8 @@ layout: section
 ```md
 ## Тема доклада
 
-«Выкиньте ваш React! 
-Переписываем продакшен на новый 
-ультра-быстрый фреймворк с нулевым бандлом!»
+«Я переписал pet-project на новый фреймворк за выходные:
+ где вау, а где боль»
 ```
 
 <div v-click class="mt-6 text-lg">
@@ -239,7 +249,7 @@ layout: section
 
 </div>
 
-<div v-click class="mt-6 p-4 bg-red-900/30 rounded-lg border border-red-500/50">
+<div v-click class="mt-6 p-4 rounded-lg border border-red-500/50">
 
 **Страх:** Скука в зале и кодовая база, которая не обновлялась больше месяца
 
@@ -253,11 +263,103 @@ layout: section
 layout: section
 ---
 
-# 🐧 Пин
+# Нюша
+
+## Продуктовая Перфекционистка
+
+*"The Product Storyteller"*
+
+<div class="speaker-avatar">
+  <img :src="'./chars/pig.png'" alt="Нюша" />
+</div>
+
+<!--
+Нюша — это спикер, который смотрит на фронтенд не только как на код, но и как на впечатление пользователя.
+-->
+
+---
+
+# 🐷 Нюша — Продуктовая Перфекционистка
+
+<div class="grid grid-cols-2 gap-8">
+
+<div class="mt-6">
+
+## Характеристика
+
+- Чувствует аудиторию и пользователя
+- Думает о продуктовой ценности
+- Любит и умеет быть в центре внимания
+- Не прощает интерфейсам и докладам небрежность
+
+</div>
+
+<div v-click class="mt-6">
+
+## Стиль выступления
+
+- Много before/after примеров
+- Красивые слайды и аккуратные формулировки
+- Говорит через истории пользователей
+- Любит метрики, но подаёт их с драматургией
+
+</div>
+
+</div>
+
+<div v-click class="mt-8 p-4 rounded-lg border border-rose-500/50">
+
+**Фишка:** Участвует во всех круглых столах, которые найдёт
+
+</div>
+
+<!--
+Нюша напоминает, что фронтенд — это не только "отрендерить компонент", а создать ощущение, что продукт о пользователе подумал.
+-->
+
+---
+
+# 🐷 Нюша — Типичный доклад
+
+```md
+## Тема доклада
+
+«Пустые состояния, ошибки и загрузки:
+ фронтенд-детали, из-за которых пользователь
+ либо доверяет продукту, либо закрывает вкладку»
+```
+
+<div v-click class="mt-6 text-lg">
+
+> "Пользователь не видит вашу архитектуру.
+> Он видит, что кнопка дрожит, форма ругается по-человечески,
+> а загрузка не выглядит как тревожная пустота."
+
+</div>
+
+<div v-click class="mt-6 p-4 rounded-lg border border-red-500/50">
+
+**Страх:** Интерфейс, который работает технически правильно, но выглядит безразлично
+
+</div>
+
+<!--
+Доклад Нюши обычно про продуктовую магию на уровне деталей: состояния, текст, ритм, эмоции и аккуратное измерение результата.
+-->
+
+---
+layout: section
+---
+
+# Пин
 
 ## Хардкорный Инженер
 
 *"The Tech Geek"*
+
+<div class="speaker-avatar">
+  <img :src="'./chars/pin.png'" alt="Пин" />
+</div>
 
 <!--
 А теперь поговорим о Пине — хардкорном инженере нашего списка.
@@ -273,7 +375,7 @@ layout: section
 
 ## Характеристика
 
-- Изобретатель и новатор
+- Изобретатель, новатор и иногда вольнодумец
 - Собирает системы из низкоуровневых компонентов
 - Говорит на языке перформанса
 - Obsessed с оптимизацией
@@ -293,7 +395,7 @@ layout: section
 
 </div>
 
-<div v-click class="mt-8 p-4 bg-purple-900/30 rounded-lg border border-purple-500/50">
+<div v-click class="mt-8 p-4 rounded-lg border border-purple-500/50">
 
 **Фишка:** Показывает live-coding демо сложнейшего инструмента, написанного за ночь перед конференцией
 
@@ -310,8 +412,8 @@ layout: section
 ```rust
 ## Тема доклада
 
-«Пишем свой движок рендеринга на WebAssembly и Rust
- для оптимизации WebGL-сцен»
+«Как мы выиграли 40ms INP:
+ Web Workers, WASM и профилирование без магии»
 
 ## Код на слайде (700 строк)
 ```
@@ -323,7 +425,7 @@ layout: section
 
 </div>
 
-<div v-click class="mt-6 p-4 bg-red-900/30 rounded-lg border border-red-500/50">
+<div v-click class="mt-6 p-4 rounded-lg border border-red-500/50">
 
 **Страх:** Сказать "и так сойдёт" про производительность приложения
 
@@ -337,11 +439,15 @@ layout: section
 layout: section
 ---
 
-# 🦉 Совунья
+# Совунья
 
 ## Мудрый Ментор
 
 *"The Caregiver"*
+
+<div class="speaker-avatar">
+  <img :src="'./chars/owl.png'" alt="Совунья" />
+</div>
 
 <!--
 Теперь поговорим о мудрой Совунье.
@@ -369,7 +475,7 @@ layout: section
 ## Стиль выступления
 
 - Спокойный и уверенный тон
-- Материнская забота
+- Бережная коммуникация
 - Много примеров из практики
 - Успокаивает аудиторию
 
@@ -377,7 +483,7 @@ layout: section
 
 </div>
 
-<div v-click class="mt-8 p-4 bg-green-900/30 rounded-lg border border-green-500/50">
+<div v-click class="mt-8 p-4 rounded-lg border border-green-500/50">
 
 **Фишка:** Раскладывает хаос по полочкам, дарит ощущение безопасности
 
@@ -405,7 +511,7 @@ layout: section
 
 </div>
 
-<div v-click class="mt-6 p-4 bg-red-900/30 rounded-lg border border-red-500/50">
+<div v-click class="mt-6 p-4 rounded-lg border border-red-500/50">
 
 **Страх:** Токсичная атмосфера на пул-реквестах и выгоревшие разработчики
 
@@ -419,11 +525,15 @@ layout: section
 layout: section
 ---
 
-# 🐻 Копатыч
+# Копатыч
 
 ## Суровый Практик
 
 *"The Pragmatist"*
+
+<div class="speaker-avatar">
+  <img :src="'./chars/kopat.png'" alt="Копатыч" />
+</div>
 
 <!--
 А теперь самый практичный из всех — Копатыч!
@@ -459,7 +569,7 @@ layout: section
 
 </div>
 
-<div v-click class="mt-8 p-4 bg-orange-900/30 rounded-lg border border-orange-500/50">
+<div v-click class="mt-8 p-4 rounded-lg border border-orange-500/50">
 
 **Фишка:** Срезает маркетинговый хайп жёсткими аргументами про стоимость поддержки и деньги бизнеса
 
@@ -476,8 +586,8 @@ layout: section
 ```md
 ## Тема доклада
 
-«Укуси меня пчела! Зачем вы тащите Next.js туда, 
-где хватает обычного HTML и щепотки ванильного JS?»
+«Стоимость владения фронтендом:
+ почему простое решение переживает три волны хайпа»
 ```
 
 <div v-click class="mt-6 text-lg">
@@ -488,7 +598,7 @@ layout: section
 
 </div>
 
-<div v-click class="mt-6 p-4 bg-red-900/30 rounded-lg border border-red-500/50">
+<div v-click class="mt-6 p-4 rounded-lg border border-red-500/50">
 
 **Страх:** Упавший прод из-за того, что библиотека обновила мажорную версию
 
@@ -502,11 +612,15 @@ layout: section
 layout: section
 ---
 
-# 🐑 Бараш
+# Бараш
 
 ## Рефлексирующий Эстет
 
 *"The Artist"*
+
+<div class="speaker-avatar">
+  <img :src="'./chars/barash.png'" alt="Бараш" />
+</div>
 
 <!--
 Теперь поговорим о самом творческом спикере — Бараше.
@@ -542,7 +656,7 @@ layout: section
 
 </div>
 
-<div v-click class="mt-8 p-4 bg-pink-900/30 rounded-lg border border-pink-500/50">
+<div v-click class="mt-8 p-4 rounded-lg border border-pink-500/50">
 
 **Фишка:** Может полчаса рассказывать про правильный подбор шрифтовых пар и кривые Безье
 
@@ -559,8 +673,8 @@ layout: section
 ```md
 ## Тема доклада
 
-«Поэзия микро-взаимодействий:
- как закодить идеальный плавный скролл на чистом CSS»
+«Дизайн-система как партитура:
+ как токены, motion и типографика делают интерфейс цельным»
 ```
 
 <div v-click class="mt-6 text-lg italic">
@@ -571,7 +685,7 @@ layout: section
 
 </div>
 
-<div v-click class="mt-6 p-4 bg-red-900/30 rounded-lg border border-red-500/50">
+<div v-click class="mt-6 p-4 rounded-lg border border-red-500/50">
 
 **Страх:** Интерфейсы без души и кривая вёрстка "на глаз"
 
@@ -585,11 +699,15 @@ layout: section
 layout: section
 ---
 
-# 🦌 Лосяш
+# Лосяш
 
 ## Академический Учёный
 
 *"The Sage"*
+
+<div class="speaker-avatar">
+  <img :src="'./chars/losyash.png'" alt="Лосяш" />
+</div>
 
 <!--
 И наконец, самый академический из всех — Лосяш!
@@ -625,7 +743,7 @@ layout: section
 
 </div>
 
-<div v-click class="mt-8 p-4 bg-indigo-900/30 rounded-lg border border-indigo-500/50">
+<div v-click class="mt-8 p-4 rounded-lg border border-indigo-500/50">
 
 **Фишка:** Сложнейшие концепции TypeScript объясняет так просто, что "каждый джун поймёт"
 
@@ -642,8 +760,8 @@ layout: section
 ```ts
 ## Тема доклада
 
-«Феноменальная типизация: продвинутые возможности
- TypeScript Type-Level программирования»
+«TypeScript как система доказательств:
+ что реально можно гарантировать типами»
 
 ## Код на слайде
 
@@ -657,7 +775,7 @@ type Equals<X, Y> = ...
 
 </div>
 
-<div v-click class="mt-6 p-4 bg-red-900/30 rounded-lg border border-red-500/50">
+<div v-click class="mt-6 p-4 rounded-lg border border-red-500/50">
 
 **Страх:** Недостаточно строгая типизация и динамический поиск ошибок в рантайме
 
@@ -671,11 +789,15 @@ type Equals<X, Y> = ...
 layout: section
 ---
 
-# 🦚 Кар-Карыч
+# Кар-Карыч
 
 ## Звёздный Шоумен
 
 *"The Entertainer"*
+
+<div class="speaker-avatar">
+  <img :src="'./chars/kar.png'" alt="Кар-Карыч" />
+</div>
 
 <!--
 А теперь о звезде любой конференции!
@@ -711,7 +833,7 @@ layout: section
 
 </div>
 
-<div v-click class="mt-8 p-4 bg-amber-900/30 rounded-lg border border-amber-500/50">
+<div v-click class="mt-8 p-4 rounded-lg border border-amber-500/50">
 
 **Фишка:** Умеет заполнить любое время презентации и удержать внимание зала до последней минуты
 
@@ -743,7 +865,7 @@ layout: section
 
 </div>
 
-<div v-click class="mt-6 p-4 bg-red-900/30 rounded-lg border border-red-500/50">
+<div v-click class="mt-6 p-4 rounded-lg border border-red-500/50">
 
 **Страх:** Оказаться в тени другого спикера на той же конференции
 
@@ -755,31 +877,48 @@ layout: section
 
 ---
 
-# Сравнительная таблица
+# А какой ты смешарик Вася
 
-| Архетип | Фокус | Энергия             | Сложность |
-|---------|-------|---------------------|-----------|
-| 🦔 Ежик | Стандарты | 🧘 Спокойная        | 📊 Средняя |
-| 🐇 Крош | Тренды | 🔥 Максимальная     | 📗 Базовая |
-| 🐧 Пин | Перформанс | 💻 Техническая      | 📕 Высокая |
-| 🦉 Совунья | Команда | 🤗 Тёплая           | 📗 Базовая |
-| 🐻 Копатыч | Бизнес | 💪 Практичная       | 📗 Базовая |
-| 🐑 Бараш | Красота | 🎨 Творческая       | 📊 Средняя |
-| 🦌 Лосяш | Теория | 🧠 Интеллектуальная | 📕 Высокая |
-| 🦚 Кар-Карыч | Харизма | 🎭 Театральная      | 📗 Базовая |
+<div v-click class="speaker-avatar speaker-avatar-lovelas">
+  <img :src="'./chars/lovelas.png'" alt="Вася" />
+</div>
+
+<div v-click="-1" class="mt-16 text-4xl text-center">
+
+**Чёрный ловелас**
+
+</div>
+
+<div v-click class="mt-28 text-2xl text-center">
+
+Имеет длинные усы и волосы до плеч,
+шляпу с пером, плащ и пятиструнную гитару
+
+</div>
+
+<div v-click class="mt-8 text-2xl text-center">
+
+Сводит с ума Нюшу
+
+</div>
+
+<!--
+Пауза после всех архетипов: отдельный мемный вопрос к аудитории.
+-->
 
 ---
 
 # Какой вы спикер?
 
-<div class="mt-8 text-2xl text-center">
+<div class="mt-8 text-2xl">
 
 **Ответьте себе на вопросы:**
 
-<v-clicks>
+<v-clicks class="text-left">
 
 - Читаете спецификации для удовольствия? → 🦔 Ежик
 - Первым пробуете новые фреймворки? → 🐇 Крош
+- Думаете о продуктовых деталях и эмоциях пользователя? → 🐷 Нюша
 - Оптимизируете всё подряд? → 🐧 Пин
 - Заботитесь о команде? → 🦉 Совунья
 - Скептик к хайпу? → 🐻 Копатыч
@@ -817,11 +956,11 @@ layout: section
 </div>
 
 <div v-click class="mt-12 flex gap-8 justify-center text-4xl">
-  🦔 🐇 🐧 🦉 🐻 🐑 🦌 🦚
+  🦔 🐇 🐷 🐧 🦉 🐻 🐑 🦌 🦚
 </div>
 
 <!--
-Все восемь архетипов дополняют друг друга. Идеальная конференция — это баланс между ними. 
+Все девять архетипов дополняют друг друга. Идеальная конференция — это баланс между ними.
 Спасибо за внимание!
 -->
 
@@ -836,7 +975,7 @@ layout: section
 </div>
 
 <div class="mt-12 text-4xl">
-  🦔 🐇 🐧 🦉 🐻 🐑 🦌 🦚
+  🦔 🐇 🐷 🐧 🦉 🐻 🐑 🦌 🦚
 </div>
 
 <!--
