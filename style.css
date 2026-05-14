@@ -80,3 +80,27 @@ kbd {
   background: #00CE93 !important;
   color: #ffffff !important;
 }
+
+.speaker-avatar {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+  width: 13.5rem;
+  height: 13.5rem;
+  overflow: hidden;
+  border: 4px solid #f472b6;
+  border-radius: 9999px;
+  background: rgb(255 255 255 / 80%);
+}
+
+.speaker-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: translateY(14%) scale(1.5);
+  transform-origin: center center;
+}
+
+.speaker-avatar-lovelas img {
+  transform: translateY(14%) scale(2.25);
+}
